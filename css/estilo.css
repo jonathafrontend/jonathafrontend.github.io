@@ -201,14 +201,11 @@ section#apresentacao .box-buttons{
     position: relative;
 }
 
-section#apresentacao .box-buttons::before{
-    content: 'Clique e conheça um pouco mais sobre mim';
+section#apresentacao .box-buttons::after{
+    content: 'Clique em alguns do itens acima e conheça um pouco mais sobre mim';
     display: block;
+    margin-top: 1.05em;
     color: var(--secondaria);
-    position: absolute;
-    left: 35%;
-    transform: translateX(-50%);
-    top: 50%;
 }
 
 section#apresentacao .box-buttons span:last-child{
@@ -358,6 +355,11 @@ section#faq .display-7 a, section#faq .display-7 a>i{
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
+    .title{
+        line-height: 1;
+        font-size: 35px;
+        padding: 1.5rem 0;
+    }
     /* float */
     section#apresentacao::before{
         content: '';
@@ -395,7 +397,7 @@ section#faq .display-7 a, section#faq .display-7 a>i{
     }
 
     section#apresentacao h1{
-        font-size: 27px;
+        font-size: 35px;
     }
 
     section#habilidades .card{
