@@ -1,0 +1,388 @@
+:root{
+    --principal: #00c3ff;
+    --secondaria: #ed145b;
+    --terciaria: #8000ff;
+    --quartiario: #2cc72c;
+    --white-50: rgba(255,255,255, .7);
+    --title: 55px;
+    --subtitle:30px;
+}
+
+html,body{
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'techfont';
+    src: url(../fonts/Techfont.woff);
+    font-weight:500;
+}
+
+::selection{
+    background-color: rgba(255, 255, 255,0.7);
+}
+
+.principal{
+    color: var(--principal);
+}
+
+.bg-principal{
+    background-color: var(--principal);
+}
+
+.secondaria{
+    color: var(--secondaria);
+}
+
+.bg-secondaria{
+    background-color: var(--secondaria);
+}
+
+.terciaria{
+    color: var(--terciaria);
+}
+
+.bg-terciaria{
+    background-color: var(--terciaria);
+}
+
+.quartiario{
+    color: var(--quartiario);
+}
+
+.title{
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
+.btn-custom-0{
+    background: #121212;
+    border: 2px solid var(--secondaria);
+    text-align: center;
+    color: var(--secondaria);
+}
+
+.btn-custom-0:hover{
+    background-color: var(--secondaria);
+    color: #121212;
+}
+
+.gradient {
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: relative;
+}
+
+.btn-modern{
+    display: block;
+    position: relative;
+    margin: 50px 0;
+}
+
+.btn-modern:hover{
+    text-decoration: none;
+}
+
+.btn-modern:hover::before, .btn-modern:hover::after{
+    border-color: var(--secondaria);
+    color: var(--secondaria);
+}
+
+.btn-modern::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--secondary);
+    cursor: pointer;
+    border-radius: 2em;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-modern::after{
+    content: 'Minhas Habilidades';
+    width: 1px;
+    height: 25px;
+    border: 1px solid var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    top:0px;
+    padding-top: 30px;
+    margin: 0 auto;
+    color: var(--secondary);
+    text-align: center;
+}
+
+.btn-modern:nth-child(2):after{
+    content: 'Meus projetos';
+}
+
+.btn-modern:nth-child(3):after{
+    content: 'Perguntas frequentes';
+}
+
+body{
+    /* background: url("https://www.fiap.com.br/wp-content/themes/fiap2016/images/fiap/graduacao/curso/header/tds.png") no-repeat #000; */
+    background: url('../img/gradiente.jpg') #000;
+    background-position: center top;
+    background-size: 100% 186px;
+    font-family: 'Gotham';
+    font-size: 14px;
+}
+
+/* menu */
+nav.navbar-transparente {
+	background: transparent;
+	padding: 15px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    position: relative;
+	color: #fff;
+    display: block;
+    margin: 0 5px;
+    overflow: hidden;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight:500;
+    letter-spacing: 2px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: var(--secondaria);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::before{
+    background: var(--secondaria);
+    width: 100%;
+
+}
+
+.navbar-dark .navbar-nav .nav-link::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    display: block;
+    height: 2px;
+    transition: width 1s;
+    bottom: 0;
+    background-color: var(--secondaria);
+}
+
+/* SEÇÃO APRESENTAÇÃO */
+section#apresentacao{
+    height: 100%;
+    text-transform: uppercase;
+    color: #9a9a9a;
+    position: relative;
+}
+
+section#apresentacao::before{
+    content: '';
+    display: block;
+    width: 84px;
+    height: 203px;
+    position: absolute;
+    top: 50%;  
+    left: 50px;
+    background: url('../img/float-1.png') no-repeat;
+}
+
+section#apresentacao h1{
+    font-size: var(--title);
+    font-weight:400;
+}
+
+section#apresentacao h1>strong{
+    color: var(--secondaria);
+    font-weight: 600;
+}
+
+section#apresentacao .box-buttons{
+    display: block;
+    position: relative;
+}
+
+section#apresentacao .box-buttons::before{
+    content: 'Clique e conheça um pouco mais sobre mim';
+    display: block;
+    color: var(--secondaria);
+    position: absolute;
+    left: 35%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+section#apresentacao .box-buttons span:last-child{
+    color: #202020;
+    font-weight: bold;
+    font-family: 'Gotham';
+    font-size: 50px;
+    display: block;
+    animation: arrow 1s 3s linear 3 forwards;
+}
+
+@-o-keyframes arrow{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(10px);color: #ed145b;}    
+}
+
+@-moz-keyframes arrow{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(10px);color: #ed145b;}    
+}
+
+@-webkit-keyframes arrow{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(10px);color: #ed145b;}
+}
+
+/* seção habilidades */
+section#habibilidades{
+
+}
+
+section#habilidades .container-fluid .card{
+    background: transparent;
+    margin-bottom: 20px;
+    width: 30rem;
+    display: inline-block;
+    border-left: 2px solid var(--secondaria);
+    border-right: 2px solid var(--secondaria);
+    border-bottom: 2px solid var(--secondaria);
+    position: relative;
+}
+
+section#habilidades .container-fluid .card .card-body{
+    padding-top: 50px;
+}
+
+
+
+section#habilidades .container-fluid .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 2px;
+    display: block;
+    background-color: var(--secondaria);
+}
+
+section#habilidades .container-fluid .card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 2px;
+    display: block;
+    background-color: var(--secondaria);
+}
+
+section#habilidades .container-fluid .card p{
+    color: var(--white-50);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+
+section#habilidades .container-fluid .card h2{
+    color: transparent;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calc(var(--title) - 15px);
+    font-weight: 500;
+    text-align: center;
+    -webkit-text-stroke: 2px rgb(237, 20, 91);
+}
+
+
+/* seção projetos*/
+
+section#projetos{
+    background: url("../img/globo2.png") no-repeat;
+    background-size:cover;
+}
+
+
+/* seção FAQ */
+section#faq .card{
+    background-color: transparent;
+    border: none;
+}
+
+section#faq .card .card-header{
+    background-color: #202020;
+    margin: 0.500rem 0;
+}
+
+section#faq .card .card-header a{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid var(--secondaria);
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+section#faq .card .card-header a>span{
+    font-size: 1.4em;
+    color: var(--secondaria);
+    transform: rotate(-45deg);
+}
+
+section#faq .card .card-header a>span:focus{
+    transform: rotate(0);
+}
+
+section#faq .display-7{
+    color: #fff;
+    font-weight: 400;
+    padding-left: 1.2rem;
+    padding-bottom: 1.5rem;
+}
+
+section#faq .display-7 a, section#faq .display-7 a>i{
+    color: var(--secondaria);
+}
+
+/* Media queries */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    section#habilidades .card{
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	
+}
+
+/* Large devices (desktops, 992px and up */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	
+}
+
+/* Extra large devices large desktops, 1200px and up*/
+@media (min-width: 1200px) {
+	
+}
+
