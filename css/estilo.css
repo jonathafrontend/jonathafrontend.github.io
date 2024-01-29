@@ -8,10 +8,6 @@
     --subtitle:30px;
 }
 
-html,body{
-    height: 100%;
-}
-
 @font-face {
     font-family: 'techfont';
     src: url(../fonts/Techfont.woff);
@@ -174,7 +170,6 @@ nav.navbar-transparente {
 
 /* SEÇÃO APRESENTAÇÃO */
 section#apresentacao{
-    height: 100%;
     text-transform: uppercase;
     color: #9a9a9a;
     position: relative;
@@ -248,11 +243,13 @@ section#habibilidades{
 section#habilidades .container-fluid .card{
     background: transparent;
     margin-bottom: 20px;
-    width: 30rem;
-    display: inline-block;
+    width: 28rem;
+    display: inline-flex;
+    flex: 1 3 auto;
     border-left: 2px solid var(--secondaria);
     border-right: 2px solid var(--secondaria);
     border-bottom: 2px solid var(--secondaria);
+    border-top: none;
     position: relative;
 }
 
@@ -360,6 +357,21 @@ section#faq .display-7 a, section#faq .display-7 a>i{
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+
+    /* float */
+    section#apresentacao::before{
+        content: '';
+        display: none;
+    }
+
+    section#habilidades .container-fluid .card{
+        width: 100% !important;
+    }
+
+    section#apresentacao h1{
+        font-size: 25px;
+    }
+
     section#projetos img#img_working{
         width: 100% !important;
     }
@@ -371,6 +383,21 @@ section#faq .display-7 a, section#faq .display-7 a>i{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* float */
+    section#apresentacao::before{
+        content: '';
+        display: none;
+    }
+
+    section#habilidades .container-fluid .card{
+        width: 100% !important;
+    }
+
+    section#apresentacao h1{
+        font-size: 27px;
+    }
+
     section#habilidades .card{
         width: 100% !important;
         margin: 0 auto;
@@ -387,6 +414,20 @@ section#faq .display-7 a, section#faq .display-7 a>i{
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    /* float */
+    section#apresentacao::before{
+        content: '';
+        display: none;
+    }
+
+    section#habilidades .container-fluid .card{
+        width: 100% !important;
+    }
+
+    section#apresentacao h1{
+        font-size: 40px;
+    }
+
 	section#projetos img#img_working{
         width: 100% !important;
     }
@@ -394,6 +435,11 @@ section#faq .display-7 a, section#faq .display-7 a>i{
 
 /* Large devices (desktops, 992px and up */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
+    section#habilidades .container-fluid .card {
+        width: 20rem;
+    }
+
 	section#projetos img#img_working{
         width: 100% !important;
     }
@@ -401,8 +447,6 @@ section#faq .display-7 a, section#faq .display-7 a>i{
 
 /* Extra large devices large desktops, 1200px and up*/
 @media (min-width: 1200px) {
-    section#projetos img#img_working{
-        
-    }	
+    
 }
 
